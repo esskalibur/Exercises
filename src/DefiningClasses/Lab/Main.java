@@ -10,18 +10,18 @@ public class Main {
 
         while (carsCount-- > 0) {
             String[] tokens = scanner.nextLine().split("\\s+");
+
             String brand = tokens[0];
-            String model = tokens[1];
-            int horsePower = Integer.parseInt(tokens[2]);
 
-            Car car = new Car();
-
-            car.setBrand(brand);
-            car.setModel(model);
-            car.setHorsePower(horsePower);
-
+            Car car;
+            if(tokens.length==1){
+                car = new Car(brand);
+            }else{
+                String model = tokens[1];
+                int horsePower = Integer.parseInt(tokens[2]);
+                car = new Car(brand,model,horsePower);
+            }
             System.out.println(car.carInfo());
-
         }
     }
 }

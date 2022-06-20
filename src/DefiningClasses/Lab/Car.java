@@ -11,7 +11,11 @@ public class Car {
         this.horsePower = horsePower;
     }
 
-    public Car() {
+    public Car(String brand) {
+        this(brand,"unknown",-1);
+        this.brand = brand;
+        this.model = "unknown";
+        this.horsePower = -1;
 
     }
 
