@@ -1,4 +1,4 @@
-package DefiningClasses.Lab;
+package DefiningClasses;
 
 public class Car {
     private String brand;
